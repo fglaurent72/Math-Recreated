@@ -19,8 +19,6 @@
   padding: 1rem;
 }
 
-/* ADD STYLES TO EACH OF THE FOLLOWING SELECTORS */
-
 .header {
   grid-area: header;
   background-color: coral;
