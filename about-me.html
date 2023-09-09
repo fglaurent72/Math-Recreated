@@ -6,18 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Math Re-Created</title>
   <meta name="description" content="Math For High School Students. By Fritz Gerald Laurent, Former High School Math Teacher">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="https://khazar.org/uploads/files/image/13_11_08_normal_ian-symbol-mathematics-pi.png">
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
- 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./form.css">
+  
 </head>
 
 <body>
-       <div class="wrapper">
-
+  
+ <div class="wrapper">
+ 
     <div class="grid-container">
       <header class="grid-item header">
-        <h2>Fritz Gerald LAURENT</h2>
+      
+        <h2>Fritz Gerald LAURENT</h2></br>
+      
         <nav class="navbar navbar-expand-lg bg-light">
           <div class="container-fluid">
             <a class="navbar-brand"  class="active" href="index.html">Home</a>
@@ -42,30 +47,27 @@
               <button class="btn btn-outline-success mx-3">LogIn</button>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">SignUp</button>
               <!-- Modal -->
+              <!-- Modal -->
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Full name">
-                        <label for="floatingInput">Full name</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email address</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input type="phone number" class="form-control" id="floatingInput" placeholder="phonenumber">
-                        <label for="floatingInput">Phone number</label>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button data-bs-dismiss="modal" type="button" class="btn btn-primary">Subscribe</button>
+                      <!--<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+<!--form insertion-->
+   <div class="container1"> <div class="header1"><br><h2>Newsletter Sign-Up</h2></div>
+   <div> <form name="MyForm"  method="post" action="thankyou.html">
+        <div class="main1" >
+            <input type="text" name="fullname"  placeholder="Your name">
+            <input type="text" name="email"  placeholder="Your email">
+            <input type="#" id="phonenumber" name="phonenumber" placeholder="Your phone number" maxlength="15" >
+           <div class="footer1">
+             <input class="submit" type="submit" name="sending"  value="Submit" onClick="javascript:return validateInputs();">
+               
+             </div>
+        </div>
+      </div>
+    </form>
+</div>
                     </div>
                   </div>
                 </div>
@@ -74,35 +76,61 @@
           </div>
         </nav>
       </header>
- <main class="grid-item main">
-        <blockquote>
-          <img src="./medias/pictures/fgl.jpeg" width="140px" height="140" align="right">
-          <h4>About Me</h4>
-          <p>Former math teacher in High School in my country, I have been 
+      
+ <main class="grid-item main" style=" padding-left: 3rem;padding-right: 3rem;">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrMuW7xBTTCp2EhtkRV0TJptcKn4ongjk
+&callback=initMap&v=weekly"
+      defer></script> 
+  <div id="map" style="width:auto; height: 400px;"> </div> <br>
+   
+   <!-- Forms for Different Features -->
+    <form id="markerForm">
+        
+        <input class="about" type="text" id="markerAddress" placeholder="Address">
+        <button class="about" type="button" onclick="placeMarker()">Search Address</button>
+    </form>
+
+    <form id="directionForm">
+        
+        <input class="about" type="text" id="origin" placeholder="Origin">
+        
+        <input class="about" type="text" id="destination" placeholder="Destination">
+        <button class="about" type="button" onclick="calcRoute()">Search Route</button>
+    </form>
+   
+
+      <div>    
+         <img src="./medias/pictures/fgl.jpg" alt="The author's picture" width="140px" height="120" align="right" margin="2rem">
+          <h3>About Me</h3>
+          <p1><blockquote>Former math teacher in High School for ten years in my home town, Limbe, Northern of Haiti, I migrated to Miami, Florida, in 2016. I have always been 
             interested in music and, in 2020, I got an Associate Degree 
             in Music Business at <a target="_blank" href="https://www.mdc.edu/">Miami Dade College</a>.
-             I am starting now a new journey as Software Developer
+             In 2023, I started a new journey as Software Developer
               at <a target="_blank" href="https://training.correlation-one.com/">Correlation-One</a>, 
-              a great opportunity offered by <a target="_blank" href="https://www.amazon.com/">Amazon</a> 
-              to its employees.<br>Extensive learnings have been provided in HTML, CSS, and JavaScript
-            by 2 outstanding teachers and 3 teacher's assistants who really committed to our success in this program.
-            Coding is very amazing. Now, when I am not coding, I work on my music stuff or do
-                   some math. My favorite sports are soccer and chess.<br> 
-            I created this website to teach high school students who want to improve their math skills. Here is a place
-            where they can discover and recreate. They will learn how to learn by themselves.
-            The site will also provide them with music and chess as recreation. 
-            Sport is an auxiliary to study. They will find a lot of good advice which will help 
-            them prepare and succeed in their studies. Everybody is WELCOME! <br><br>
-            
-        </blockquote>
-      </main>
-<footer class="grid-item footer">
-        <img src="https://www.freepnglogos.com/uploads/instagram-icon-png/instagram-icon-suzem-limited-make-known-20.png" width="40px" height="40px" align="left">
-        <img src="https://www.freeiconspng.com/thumbs/twitter-icon/twitter-icon-9.png" width="40px" height="40px" align="left">
-        &copy; 2023 FGLaurent Website. All rights reserved.
-      </footer>
+              which is a great opportunity offered by <a target="_blank" href="https://www.amazon.com/">Amazon</a> 
+              to its employees. Coding is very amazing and fascinating. <br/><br/>
+        I created this website to teach High School students who want to improve their math skills. Here is a place where they can "Dis-Cover" and "Re-Create" math. They will learn how to learn by themselves. The site will also provide them with music and chess as recreation. Sport is an auxiliary to study. They will find a lot of good advices which will help them prepare and succeed in their studies. So, WELCOME to Everybody!</blockquote></p1>
+        
+      </div>
+        
+ </main>
+<footer class="grid-item footer" >
+   <div class="footer__content">
+        <img class="social" src="https://www.freepnglogos.com/uploads/instagram-icon-png/instagram-icon-suzem-limited-make-known-20.png">
+        <img class="social" src="https://www.freeiconspng.com/thumbs/twitter-icon/twitter-icon-9.png">
+  <img class="social" src="https://static-00.iconduck.com/assets.00/linkedin-icon-2048x2048-ya5g47j2.png">  
+        &copy; 2023 FGL's Website. All rights reserved.
+   </div>     
+</footer>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
+  
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="./form.js"> </script>
+   <script src="./script.js"></script>
+  <script src="./map.js"</script>
+
+  
+  </body>
 </html>
